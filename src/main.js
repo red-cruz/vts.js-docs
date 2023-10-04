@@ -1,3 +1,4 @@
+import './assets/scss/app.scss'
 import './dependencies'
 import { createApp } from 'vue'
 import App from './App.vue'
