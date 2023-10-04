@@ -1,10 +1,10 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-dark-subtle sticky-top overflow-auto">
+  <nav class="navbar navbar-expand-lg bg-dark-subtle sticky-top overflow-auto g-0">
     <div class="container-fluid">
-      <RouterLink to="/" class="navbar-brand">Vts.js</RouterLink>
+      <RouterLink to="/" class="navbar-brand fw-bold fs-3">Vts.js</RouterLink>
       <div>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler border-0 p-0"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarScroll"
@@ -12,27 +12,27 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <Icon icon="ep:menu" height="30" />
         </button>
       </div>
       <div
         class="collapse navbar-collapse navbar-nav-scroll pe-lg-2 mt-2 mt-lg-0"
         id="navbarScroll"
       >
-        <ul class="nav nav-underline flex-column">
+        <ul class="nav nav-underline flex-column" style="--bs-nav-underline-gap: 1px">
           <li class="nav-item">
             <form class="d-flex" role="search">
               <div class="input-group">
                 <input
-                  type="text"
+                  type="search"
                   name="search"
-                  class="form-control"
+                  class="form-control rounded-0"
                   placeholder="Search"
-                  aria-label="Recipient's username"
-                  aria-desribedby="button-addon2"
+                  aria-label="Search"
+                  aria-desribedby="search"
                   required
                 />
-                <button class="btn btn-outline-secondary p-auto" type="submit" id="button-addon2">
+                <button class="btn btn-outline-secondary rounded-0" type="submit" id="search">
                   <Icon icon="bi:search" />
                 </button>
               </div>
@@ -44,8 +44,8 @@
               <i class="fa-solid fa-download"></i> Installation
             </NavItem>
             <ul class="navbar-nav ps-4" id="installation">
-              <NavItem :href="{ name: 'installation', hash: '#cdn' }" active-class="">CDN</NavItem>
-              <NavItem :href="{ name: 'installation', hash: '#npm' }" active-class="">NPM</NavItem>
+              <NavItem :href="{ name: 'installation', hash: '#CDN' }" active-class="">CDN</NavItem>
+              <NavItem :href="{ name: 'installation', hash: '#NPM' }" active-class="">NPM</NavItem>
             </ul>
           </li>
           <li class="nav-item">
@@ -53,14 +53,14 @@
               <i class="fa-solid fa-sliders"></i> Configuration
             </NavItem>
             <ul class="navbar-nav ps-4">
-              <NavItem href="/configuration#ajax">Ajax</NavItem>
-              <NavItem href="/configuration#class">Class</NavItem>
-              <NavItem href="/configuration#class">Class</NavItem>
-              <NavItem href="/configuration#class">Class</NavItem>
-              <NavItem href="/configuration#class">Class</NavItem>
-              <NavItem href="/configuration#class">Class</NavItem>
-              <NavItem href="/configuration#class">Class</NavItem>
-              <NavItem href="/configuration#class">Classa</NavItem>
+              <NavItem href="/configuration#Ajax">Ajax</NavItem>
+              <NavItem href="/configuration#Class">Class</NavItem>
+              <NavItem href="/configuration#Halt">Halt</NavItem>
+              <NavItem href="/configuration#Handlers">Handlers</NavItem>
+              <NavItem href="/configuration#Listen">Listen</NavItem>
+              <NavItem href="/configuration#Message">Message</NavItem>
+              <NavItem href="/configuration#Rules">Rules</NavItem>
+              <NavItem href="/configuration#StopPropagation">StopPropagation</NavItem>
             </ul>
           </li>
         </ul>
@@ -85,6 +85,9 @@ import NavItem from './NavItem.vue'
   .navbar {
     height: 100vh;
     align-items: flex-start;
+  }
+  .navbar-brand {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 }
 </style>
