@@ -48,8 +48,8 @@
               Installation
             </NavItem>
             <ul class="navbar-nav ps-4" id="installation">
-              <SubItem :href="{ name: 'installation', hash: '#CDN' }">CDN</SubItem>
-              <SubItem :href="{ name: 'installation', hash: '#NPM' }">NPM</SubItem>
+              <NavItem :href="{ name: 'installation', hash: '#CDN' }">CDN</NavItem>
+              <NavItem :href="{ name: 'installation', hash: '#NPM' }">NPM</NavItem>
             </ul>
           </li>
           <li class="nav-item">
@@ -58,16 +58,16 @@
               Configuration
             </NavItem>
             <ul class="navbar-nav ps-4" id="configuration">
-              <SubItem :href="{ name: 'configuration', hash: '#Ajax' }">Ajax</SubItem>
-              <SubItem :href="{ name: 'configuration', hash: '#Class' }">Class</SubItem>
-              <SubItem :href="{ name: 'configuration', hash: '#Halt' }">Halt</SubItem>
-              <SubItem :href="{ name: 'configuration', hash: '#Handlers' }">Handlers</SubItem>
-              <SubItem :href="{ name: 'configuration', hash: '#Listen' }">Listen</SubItem>
-              <SubItem :href="{ name: 'configuration', hash: '#Message' }">Message</SubItem>
-              <SubItem :href="{ name: 'configuration', hash: '#Rules' }">Rules</SubItem>
-              <SubItem :href="{ name: 'configuration', hash: '#StopPropagation' }">
+              <NavItem :href="{ name: 'configuration', hash: '#Ajax' }">Ajax</NavItem>
+              <NavItem :href="{ name: 'configuration', hash: '#Class' }">Class</NavItem>
+              <NavItem :href="{ name: 'configuration', hash: '#Halt' }">Halt</NavItem>
+              <NavItem :href="{ name: 'configuration', hash: '#Handlers' }">Handlers</NavItem>
+              <NavItem :href="{ name: 'configuration', hash: '#Listen' }">Listen</NavItem>
+              <NavItem :href="{ name: 'configuration', hash: '#Message' }">Message</NavItem>
+              <NavItem :href="{ name: 'configuration', hash: '#Rules' }">Rules</NavItem>
+              <NavItem :href="{ name: 'configuration', hash: '#StopPropagation' }">
                 StopPropagation
-              </SubItem>
+              </NavItem>
             </ul>
           </li>
           <li class="nav-item">
@@ -76,8 +76,8 @@
               API
             </NavItem>
             <ul class="navbar-nav ps-4" id="api">
-              <SubItem :href="{ name: 'api', hash: '#Methods' }"> Methods </SubItem>
-              <SubItem :href="{ name: 'api', hash: '#Properties' }"> Properties </SubItem>
+              <NavItem :href="{ name: 'api', hash: '#Methods' }"> Methods </NavItem>
+              <NavItem :href="{ name: 'api', hash: '#Properties' }"> Properties </NavItem>
             </ul>
           </li>
           <li class="nav-item">
@@ -86,8 +86,8 @@
               Example
             </NavItem>
             <ul class="navbar-nav ps-4" id="example">
-              <SubItem :href="{ name: 'example', hash: '#Swal' }"> Swal </SubItem>
-              <SubItem :href="{ name: 'example', hash: '#Noty' }"> Noty </SubItem>
+              <NavItem :href="{ name: 'example', hash: '#Swal' }"> Swal </NavItem>
+              <NavItem :href="{ name: 'example', hash: '#Noty' }"> Noty </NavItem>
             </ul>
           </li>
         </ul>
@@ -99,7 +99,6 @@
 <script setup>
 import { Icon } from '@iconify/vue'
 import NavItem from './NavItem.vue'
-import SubItem from './SubItem.vue'
 </script>
 
 <style lang="scss" scoped>

@@ -27,6 +27,30 @@ const router = createRouter({
       meta: {
         title: 'Configuration'
       }
+    },
+    {
+      path: '/configuration',
+      name: 'configuration',
+      component: () => import('../views/ConfigurationView.vue'),
+      meta: {
+        title: 'Configuration'
+      }
+    },
+    {
+      path: '/api',
+      name: 'api',
+      component: () => import('../views/ConfigurationView.vue'),
+      meta: {
+        title: 'api'
+      }
+    },
+    {
+      path: '/example',
+      name: 'example',
+      component: () => import('../views/ConfigurationView.vue'),
+      meta: {
+        title: 'example'
+      }
     }
   ],
   scrollBehavior(to, from, savedPosition) {
