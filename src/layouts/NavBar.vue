@@ -21,8 +21,7 @@
       >
         <ul class="nav nav-underline flex-column" style="--bs-nav-underline-gap: 1px">
           <li class="nav-item">
-            <form class="d-flex" role="search">
-              <!-- <div class="input-group"> -->
+            <form role="search">
               <input
                 type="search"
                 name="search"
@@ -32,10 +31,6 @@
                 aria-desribedby="search"
                 required
               />
-              <!-- <button class="btn btn-outline-secondary rounded-0" type="submit" id="search">
-                  <Icon icon="mdi:magnify" height="25" />
-                </button>
-              </div> -->
             </form>
           </li>
           <NavItem href="/">
