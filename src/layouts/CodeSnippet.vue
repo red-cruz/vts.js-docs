@@ -1,29 +1,36 @@
 <template>
-  <pre class="container mt-2 rounded"><code><slot></slot></code></pre>
+  <pre ref="pre"><code :class="language"><slot></slot></code></pre>
 </template>
 
 <script setup>
 import hljs from 'highlight.js'
-import { onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 
+const pre = ref(null)
+
+defineProps({
+  language: { String }
+})
 onMounted(() => {
-  const snippets = document.getElementsByTagName('pre')
-  for (const snippet of snippets) {
-    let code = snippet.getElementsByTagName('code')[0].innerText
+  const snippet = pre.value
+  let code = snippet.getElementsByTagName('code')[0].innerText
 
-    snippet.classList.add('hljs') // append copy button to pre tag
+  snippet.classList.add('hljs') // append copy button to pre tag
 
-    snippet.innerHTML = '<button class="hljs-copy float-end">Copy</button>' + snippet.innerHTML // append copy button
+  snippet.innerHTML =
+    '<button class="hljs-copy float-end rounded-0 p-1 px-2 btn btn-outline-primary mt-2 me-2" type="button">Copy</button>' +
+    snippet.innerHTML // append copy button
 
-    snippet.querySelector('.hljs-copy').addEventListener('click', async function () {
-      this.innerText = 'Copying...'
-      await navigator.clipboard.writeText(code)
-      this.innerText = 'Copied!'
-      setTimeout(() => {
-        this.innerText = 'Copy'
-      }, 1000)
-    })
-  }
+  snippet.querySelector('.hljs-copy').addEventListener('click', async function () {
+    this.blur()
+    this.innerText = 'Copying...'
+    await navigator.clipboard.writeText(code)
+    this.innerText = 'Copied!'
+    setTimeout(() => {
+      this.innerText = 'Copy'
+    }, 3000)
+  })
+
   hljs.highlightAll()
 })
 </script>

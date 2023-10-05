@@ -37,19 +37,17 @@
             <Icon icon="mdi:book-open-variant" />
             Introduction
           </NavItem>
-          <li class="nav-item">
-            <NavItem href="/installation">
-              <Icon icon="mdi:download" />
-              Installation
-            </NavItem>
-            <ul class="navbar-nav ps-4" id="installation">
-              <NavItem :href="{ name: 'installation', hash: '#CDN' }">CDN</NavItem>
-              <NavItem :href="{ name: 'installation', hash: '#NPM' }">NPM</NavItem>
-            </ul>
-          </li>
+          <NavItem href="/installation">
+            <Icon icon="mdi:download" />
+            Installation
+          </NavItem>
+          <NavItem href="/usage">
+            <Icon icon="mdi:rocket-launch-outline" />
+            Usage
+          </NavItem>
           <li class="nav-item">
             <NavItem href="/configuration">
-              <Icon icon="mdi:cog-outline" />
+              <Icon icon="mdi:cog-sync" />
               Configuration
             </NavItem>
             <ul class="navbar-nav ps-4" id="configuration">

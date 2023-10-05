@@ -1,7 +1,7 @@
 <template>
   <div class="d-lg-flex">
     <NavBar />
-    <main class="container-fluid overflow-auto">
+    <main class="container-fluid overflow-auto py-lg-3">
       <RouterView />
     </main>
   </div>
